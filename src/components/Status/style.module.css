@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  padding-left: var(--gap-default);
+  opacity: .75;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+.status {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.offline {
+  background: rgb(var(--color-status-offline));
+  box-shadow: 0 0 4px rgb(var(--color-status-offline));
+}
+
+.online {
+  background: rgb(var(--color-status-online));
+  box-shadow: 0 0 4px rgb(var(--color-status-online));
+}
+
+.progress {
+  background: rgb(var(--color-status-progress));
+  box-shadow: 0 0 4px rgb(var(--color-status-progress));
+}
+
+.error {
+  background: rgb(var(--color-status-error));
+  box-shadow: 0 0 4px rgb(var(--color-status-error));
+}

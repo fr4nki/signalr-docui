@@ -1,0 +1,65 @@
+.container {
+  margin: calc(var(--gap-default) * 4) 0;
+  padding: calc(var(--gap-default) * 2) calc(var(--gap-default) * 3);
+  border: calc(var(--gap-default) / 2) solid var(--color-background);
+  box-shadow: 0 0 calc(var(--gap-default) * 2) var(--color-shadow);
+  border-radius: calc(var(--gap-default) * 2);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.containerActive {
+  border-color: var(--color-accent);
+}
+
+.containerFailed {
+  background: rgba(var(--color-status-error), .05);
+  border-color: rgba(var(--color-status-error), .25);
+  box-shadow: 0 0 calc(var(--gap-default) * 2) rgba(var(--color-status-error), .25);
+}
+
+.name {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  position: relative;
+}
+
+.name > span {
+  position: relative;
+  z-index: 1;
+  padding-right: calc(var(--gap-default) * 3);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.url {
+  font-family: monospace;
+  word-break: break-word;
+  margin: 0 0 calc(var(--gap-default) * 3);
+}
+
+.description {
+  font-size: 0.9em;
+  margin: 0 0 calc(var(--gap-default) * 3);
+}
+
+.editButton {
+  font-size: 0.8em;
+  margin-right: calc(var(--gap-default) * 2);
+}
+.editButton:first-of-type {
+  margin-left: calc(var(--gap-default) * -1);
+}
+.editButton:last-of-type {
+  margin-right: 0;
+}
+
+.status {
+  float: left;
+  margin-right: calc(var(--gap-default) * 2);
+  margin-top: calc(var(--gap-default) / 2);
+}

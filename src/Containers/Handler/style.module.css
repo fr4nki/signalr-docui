@@ -1,0 +1,51 @@
+.container {
+  display: none;
+}
+
+.containerActive {
+  display: block;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+}
+
+.headleft {
+  margin-top: var(--gap-default);
+  width: 100px;
+}
+
+.headright {
+  font-size: 1.1em;
+  margin-left: calc(var(--gap-default) * 5);
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: calc(var(--gap-default) * 3);
+}
+
+.description {
+}
+
+.endpoint {
+  font-family: monospace;
+  word-break: break-word;
+  margin-top: 0;
+  margin-bottom: calc(var(--gap-default) * 3);
+}
+
+.status {
+  margin-bottom: calc(var(--gap-default) * 3);
+}
+
+.statusButton {
+  width: 100%;
+}
+
+.block {
+  margin-bottom: calc(var(--gap-default) * 10);
+}

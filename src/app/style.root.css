@@ -1,0 +1,14 @@
+:root {
+  --gap-default: 4px;
+
+  --color-text: #2F2F2F;
+  --color-background: #fafafa;
+  --color-accent: #59B5DA;
+  --color-shadow: #dedede;
+  --color-gray: #e0e0e0;
+
+  --color-status-offline: 185, 185, 185;
+  --color-status-progress: 255, 255, 0;
+  --color-status-online: 0, 255, 0;
+  --color-status-error: 255,0, 0;
+}

@@ -1,0 +1,22 @@
+.container {
+  padding: calc(var(--gap-default) * 2) calc(var(--gap-default) * 3);
+  border-radius: calc(var(--gap-default) * 2);
+  border: calc(var(--gap-default) / 2) solid var(--color-background);
+}
+
+.default {
+  background: rgba(var(--color-status-offline), .25);
+  border-color: rgba(var(--color-status-offline), .5);
+}
+.error {
+  background: rgba(var(--color-status-error), .25);
+  border-color: rgba(var(--color-status-error), .5);
+}
+.success {
+  background: rgba(var(--color-status-online), .25);
+  border-color: rgba(var(--color-status-online), .5);
+}
+.warning {
+  background: rgba(var(--color-status-progress), .25);
+  border-color: rgba(var(--color-status-progress), .5);
+}

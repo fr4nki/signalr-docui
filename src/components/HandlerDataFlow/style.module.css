@@ -1,0 +1,7 @@
+.container {
+  background: white;
+  padding: calc(var(--gap-default)* 2) calc(var(--gap-default)* 4);
+  font-size: 0.85em;
+  font-family: monospace;
+  border-radius: var(--gap-default);
+}

@@ -1,0 +1,17 @@
+.container {
+  margin-bottom: calc(var(--gap-default) * 10);
+}
+
+.header {
+  padding: calc(var(--gap-default) * 2) calc(var(--gap-default) * 3);
+  margin: 0;
+  background: var(--color-gray);
+}
+
+.actionBlock {
+  margin-bottom: calc(var(--gap-default) * 10);
+}
+
+.action {
+  font-weight: 500;
+}

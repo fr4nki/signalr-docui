@@ -1,0 +1,26 @@
+.container {
+  padding: calc(var(--gap-default) * 3);
+  background: var(--color-text);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  color: var(--color-background);
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  margin-right: calc(var(--gap-default) * 2);
+}
+
+.link {
+  display: flex;
+}
+
+.link,
+.link:hover,
+.link:active,
+.link:visited {
+  text-decoration: none;
+  color: var(--color-background);
+}

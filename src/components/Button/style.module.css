@@ -1,0 +1,24 @@
+.container {
+  outline: none;
+  box-sizing: border-box;
+}
+
+.tab {
+  border: calc(var(--gap-default) / 2) solid var(--color-background);
+  box-shadow: 0 0 calc(var(--gap-default) * 2) var(--color-shadow);
+  border-radius: calc(var(--gap-default) * 2);
+  background: var(--color-background);
+  width: 100%;
+}
+
+.link {
+  border: none;
+  margin: 0;
+  width: auto;
+  background: none;
+  color: var(--color-accent);
+  padding: var(--gap-default);
+}
+.link > span {
+  border-bottom: 1px dotted var(--color-accent);
+}

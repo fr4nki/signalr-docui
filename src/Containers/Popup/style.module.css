@@ -1,0 +1,36 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  width: 70%;
+  max-width: 1000px;
+  height: auto;
+  padding: calc(var(--gap-default) * 5);
+  margin: 50px auto;
+  background: var(--color-background);
+  box-sizing: border-box;
+  border-radius: var(--gap-default);
+  box-shadow: 0 0 calc(var(--gap-default) * 2) var(--color-shadow);
+  position: relative;
+  z-index: 20;
+}
+
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.75);
+  top: 0;
+  left: 0;
+}
