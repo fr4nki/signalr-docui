@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import * as signalR from '@microsoft/signalr';
 import { HubConnectionState } from '@microsoft/signalr';
 
+import { ConnectionHandlerAction } from '~/Containers/Connections';
+
 import HandlerSendForm from '~/Components/HandlerSendForm';
 import HandlerDataFlow from '~/Components/HandlerDataFlow';
 
@@ -18,8 +20,8 @@ interface ItemData {
 interface Props {
   className?: Classnames;
   connection: signalR.HubConnection | undefined;
-  sender: string;
-  listener: string;
+  sender: ConnectionHandlerAction;
+  listener: ConnectionHandlerAction;
 }
 
 const HandlerConnection:React.FC<Props> = ({
@@ -33,7 +35,7 @@ const HandlerConnection:React.FC<Props> = ({
 
   useEffect(() => {
     if (connection) {
-      connection.on(listener, (item: any) => {
+      connection.on(listener.method, (item: any) => {
         const dataItem = {
           id: String(+new Date()),
           data: item,
@@ -64,9 +66,10 @@ const HandlerConnection:React.FC<Props> = ({
               }} />
 
               <HandlerSendForm {...{
-                onSubmit: (formdata: string) => {
+                payload: sender.payload,
+                onSubmit: (formdata: string[]) => {
                   // eslint-disable-next-line no-unused-expressions
-                  connection?.send(sender, formdata);
+                  connection?.send(sender.method, ...formdata);
                 },
               }} />
             </>

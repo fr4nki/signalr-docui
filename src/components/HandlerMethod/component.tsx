@@ -93,8 +93,8 @@ const HandlerMethod:React.FC<Props> = ({
 
       <HandlerConnection {...{
         connection,
-        sender: handler.sender.method,
-        listener: handler.listener.method,
+        sender: handler.sender,
+        listener: handler.listener,
       }} />
 
       <Divider />

@@ -16,8 +16,6 @@ const HandlerPayload:React.FC<Props> = ({
   className,
   payload,
 }) => {
-  const type = typeof payload;
-
   return (
     <div {...{
       className: classNames(

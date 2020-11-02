@@ -1,32 +1,36 @@
-// type PayloadItem = Record<string, string>
-// type ConnectionHandlerPayloadItemTypes = 'string' | 'integer' | 'float' | 'any';
-//
-// type ConnectionHandlerPayloadItem = {
-//   $type?: 'string' | 'integer' | 'float' | 'any';
-//   $description?: string;
-//   [k: string]?: ConnectionHandlerPayloadItem;
-// }
-// export type ConnectionHandlerPayload = null | Record<'$structs' | string, string | PayloadItem>;
-
 export type ConnectionStruct = Record<
 string,
 Record<string, string | Record<string, string>>
 >
 
-// TODO: Need more typings
-export type ConnectionHandlerPayload = null | Record<'$structs', string> | Record<string, string>;
+export type ConnectionHandlerPayloadNamed = {
+  [key: string]: 'number' | 'string';
+}
+
+export type ConnectionHandlerPayloadFull = {
+  [key: string]: {
+    type: 'number' | 'string',
+    description: string;
+  }
+}
+
+export type ConnectionHandlerPayloadLine = 'string' | 'number' | null;
+
+export type ConnectionHandlerPayload = (
+  ConnectionHandlerPayloadNamed |
+  ConnectionHandlerPayloadFull |
+  ConnectionHandlerPayloadLine
+)[];
+
+export type ConnectionHandlerAction = {
+  method: string;
+  description: string;
+  payload: ConnectionHandlerPayload;
+}
 
 export interface ConnectionHandler {
-  sender: {
-    method: string;
-    description: string;
-    payload: ConnectionHandlerPayload;
-  };
-  listener: {
-    method: string;
-    description: string;
-    payload: ConnectionHandlerPayload;
-  },
+  sender: ConnectionHandlerAction;
+  listener: ConnectionHandlerAction;
   description?: string;
 }
 
